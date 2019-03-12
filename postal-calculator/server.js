@@ -19,12 +19,16 @@ function handleCalculateRate(request, response) {
     // Calculate the rate based on the weight and type of mail
     if (type == 'stampedLetters') {
         rate = calculateStampedLetter(weight)
+        type = 'Letters (Stamped)';
     } else if (type == 'meteredLetters') {
         rate = calculateMeteredLetter(weight)
+        type = 'Letters (Metered)';
     } else if (type == 'largeEnvelopes') {
         rate = calculateLargeEnvelope(weight)
+        type = 'Large Envelopes (Flats)';
     } else if (type == 'firstClassPackage') {
         rate = calculateFirstClass(weight);
+        type = 'First-Class Package Service—Retail';
     }
 
     var params = {
@@ -95,7 +99,15 @@ function calculateLargeEnvelope(weight) {
 }
 
 function calculateFirstClass(weight) {
-
+    if (weight < 4) {
+        return 3.66
+    } else if (weight < 8) {
+        return 4.39
+    } else if (weight < 12) {
+        return 5.19
+    } else if (weight < 13) {
+        return 5.71
+    }
 }
 
 app.listen(port, function () {

@@ -5,6 +5,7 @@ const port = process.env.PORT || 5000;
 
 // Send in the Controllers!
 const pieController = require('./controllers/pie-controller');
+const w10Controller = require('./controllers/w10-controller');
 
 // Set up Static File serving
 app.use(express.static('public'));
@@ -23,6 +24,9 @@ app.get('/calculate-rate', handleCalculateRate);
 app.get('/pieTypes', pieController.getPieTypes);
 app.get('/pie/:id', pieController.handleGetPie);
 app.post('/pie', pieController.createPie);
+
+// Week 10 Team Activity
+app.get('/getPerson', w10Controller.handleGetPerson);
 
 function handleCalculateRate(request, response) {
     var weight = request.query.weight;

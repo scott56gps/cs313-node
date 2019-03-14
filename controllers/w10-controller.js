@@ -1,5 +1,8 @@
 const { Pool } = require('pg');
-const pool = Pool();
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
+});
 
 function getPerson(request, response) {
     const personId = request.params.id;

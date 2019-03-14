@@ -19,6 +19,7 @@
   "homepage": "https://github.com/scott56gps/cs313-node#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pg": "^7.8.2"
   }
 }

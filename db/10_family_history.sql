@@ -16,15 +16,15 @@ CREATE TABLE parent_child (
 INSERT INTO person (first_name, last_name, birth_date) VALUES (
     'Nellie',
     'Nicholes',
-    11-DEC-1993
+    11-12-1993
 ), (
     'Scott',
     'Nicholes',
-    09-AUG-1993
+    09-08-1993
 ), (
     'Echo',
     'Nicholes',
-    13-JAN-2019
+    13-01-2019
 );
 
 INSERT INTO parent_child (parent_id, child_id) VALUES (

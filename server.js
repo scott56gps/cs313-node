@@ -26,7 +26,7 @@ app.get('/pie/:id', pieController.handleGetPie);
 app.post('/pie', pieController.createPie);
 
 // Week 10 Team Activity
-app.get('/getPerson', w10Controller.handleGetPerson);
+app.get('/getPerson/:id', w10Controller.handleGetPerson);
 
 function handleCalculateRate(request, response) {
     var weight = request.query.weight;

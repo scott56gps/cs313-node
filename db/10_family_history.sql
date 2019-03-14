@@ -29,8 +29,8 @@ INSERT INTO person (first_name, last_name, birth_date) VALUES (
 
 INSERT INTO parent_child (parent_id, child_id) VALUES (
     1,
-    1
+    3
 ), (
     2,
-    1
+    3
 );
